@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Son Goku - Saiyan Warrior</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-orange: #FF8C00;
+            --dragonball-red: #D70000;
+            --energy-blue: #005A9C;
+            --dark-bg: #1A1A1A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .saiyan-header {
+            background: linear-gradient(45deg, var(--dark-bg) 30%, var(--energy-blue) 100%);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-orange);
+        }
+
+        .goku-title {
+            font-family: 'Bangers', cursive;
+            font-size: 4rem;
+            color: var(--primary-orange);
+            text-shadow: 3px 3px 0 var(--dragonball-red);
+            letter-spacing: 3px;
+        }
+
+        .power-level {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--dragonball-red);
+            border-radius: 30px;
+            margin-top: 1rem;
+            font-family: 'Bangers', cursive;
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem;
+            background: rgba(0,0,0,0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-item {
+            color: white;
+            text-decoration: none;
+            font-family: 'Bangers', cursive;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .nav-item:hover {
+            background: var(--primary-orange);
+            transform: scale(1.1);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Bangers', cursive;
+            color: var(--primary-orange);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--dragonball-red);
+            margin: 10px auto;
+        }
+
+        .power-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .power-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .power-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-orange);
+        }
+
+        .power-icon {
+            font-size: 3rem;
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+        }
+
+        .transformation-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .transformation-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 400px;
+            background-size: contain;
+            background-repeat:no-repeat;
+            background-position: center;
+            transition: transform 0.3s;
+        
+                    }
+
+        .transformation-card:hover {
+            transform: scale(1.05);
+        }
+
+        .transformation-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(transparent 60%, rgba(0,0,0,0.8));
+        }
+
+        .transformation-name {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
+            font-family: 'Bangers', cursive;
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+        }
+
+        .kamehameha-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--energy-blue), var(--primary-orange));
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-family: 'Bangers', cursive;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            margin-top: 2rem;
+        }
+
+        .kamehameha-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px var(--energy-blue);
+        }
+
+        @media (max-width: 768px) {
+            .goku-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="saiyan-header">
+        <h1 class="goku-title">SON GOKU</h1>
+        <div class="power-level">Power Level: Over 9000!</div>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#powers" class="nav-item">Powers</a>
+        <a href="#transformations" class="nav-item">Transformations</a>
+        <a href="#contact" class="nav-item">Contact</a>
+    </nav>
+
+    <section id="about" class="section">
+        <h2 class="section-title">Saiyan Warrior</h2>
+        <div class="power-grid">
+            <div class="power-card">
+                <div class="power-icon">💥</div>
+                <h3>Kamehameha</h3>
+                <p>Signature energy wave attack capable of destroying planets</p>
+            </div>
+            <div class="power-card">
+                <div class="power-icon">⚡</div>
+                <h3>Super Saiyan</h3>
+                <p>Legendary transformation multiplying power levels exponentially</p>
+            </div>
+            <div class="power-card">
+                <div class="power-icon">🛡️</div>
+                <h3>Ultra Instinct</h3>
+                <p>Mastered autonomous fighting technique with perfect defense</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="transformations" class="section">
+        <h2 class="section-title">Transformations</h2>
+        <div class="transformation-gallery">
+            <div class="transformation-card" style="background-image: url('ssj1.jpg')">
+                <span class="transformation-name">Super Saiyan</span>
+            </div>
+            <div class="transformation-card" style="background-image: url('ssj3.jpg')">
+                <span class="transformation-name">SSJ3</span>
+            </div>
+            <div class="transformation-card" style="background-image: url('ultra-instinct.jpg')">
+                <span class="transformation-name">Ultra Instinct</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Train With Me</h2>
+        <center>
+            <button class="kamehameha-btn">Charge Ki Now!</button>
+        </center>
+    </section>
+</body>
+</html>
